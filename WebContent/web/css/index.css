@@ -1,0 +1,60 @@
+body{
+	
+}
+.search-type-button{
+	background-color: #F9F9F9;
+	border: 1px solid #EBE6E2;
+	padding-bottom: 5px;
+	border-right: 0px;
+	color: #acaeac;
+}
+
+a:hover{
+	text-decoration: none;
+}
+img {
+    border: 0 none;
+    height: auto;
+    max-width: none;
+    vertical-align: middle;
+}
+
+.menu a {
+	color: #2c9cdc;
+	text-decoration: none;
+}
+
+
+.l2{width: 70px;}
+
+.menu a:hover {
+	background: #092ecd;
+}
+.menu h1 {
+	font: bold 16px Arial, Helvetica, sans-serif;
+}
+
+.chzn-container{
+	width: 100%;
+}
+.chzn-choices{
+	width: 100%;
+}
+.district_province{
+	width: 100px;
+}
+
+.district_city{
+	width: 100px;
+}
+
+.bgcolor_gray{
+	background-color: rgba(128, 131, 130, 0.3);
+}
+
+.ui_buttons input{
+	background: -webkit-gradient(linear,0% 0%,0% 100%,from(#11A49D),to(#11A49D));
+	border: solid 1px #23A1BE;
+	color: white;
+	text-shadow: 0 -1px 1px #1c6a9e;
+}

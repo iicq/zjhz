@@ -1,0 +1,41 @@
+.portlet.box.green .portlet-title{
+	background-color: #11A49C;
+}
+.btn.green{
+	background-color: #00B3D3;
+}
+
+.btn.green {
+	background-color: #00B3D3;
+}
+
+#tabContent{
+	padding: 20px 10px;
+	height: 100%;
+	
+}
+.table th,.table td{
+	text-align: center;
+	vertical-align:middle; 
+}
+.district_province{
+	width: 100px;
+}
+
+.district_city{
+	margin-left: 10px;
+	width: 100px;
+}
+
+.district_region{
+	margin-left: 10px;
+	width: 100px;
+}
+
+.table{
+	margin-top: 10px;
+}
+
+img{
+	max-width: none;
+}

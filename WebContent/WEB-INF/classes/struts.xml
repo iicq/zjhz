@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<!-- 指定Web应用的默认编码集 -->   
+ 	<constant name="struts.i18n.encoding" value="UTF-8" />  
+ 	
+ 	<!-- 设置浏览器是否缓存静态内容，开发阶段  关闭 --> 
+ 	<constant name="struts.serve.static.browserCache " value="true" />   
+ 	
+    <!-- 当 struts的配置文件修改后，系统是否自动重新加载该文件，开发阶段  打开 -->   
+    <constant name="struts.configuration.xml.reload" value="false" />   
+    
+    <!-- 开发模式下使用，这样可以打印出更详细的错误信息 -->   
+	<constant name="struts.devMode" value="false" />  
+	
+	<!--开发模式下使用，上传文件时创建的临时文件存在的目录
+	 <constant name="struts.multipart.saveDir" value="/tmp"/> -->
+	 
+	
+	<!-- 允许上传文件大小的最大值  1*1024*1024*1024 = 1G -->  
+	<constant name="struts.multipart.maxSize" value="1073741824"></constant>
+	<package name="index" namespace="/" extends="struts-default" >
+
+		<default-action-ref name="tempSend"/>
+		
+		<action name="tempSend" class="loginAction" method="tempSend"></action>
+		
+	</package>
+	<package name="oa" namespace="/oa" extends="struts-default" >
+		
+		<interceptors>
+            <interceptor name="adminInterceptor" class="com.nursery.interceptor.AdminInterceptor"/>
+            <interceptor-stack name="adminStack">
+                <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="adminInterceptor"/>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="adminStack"/> 
+        
+		<action name="*_*" class="{2}Action" method="{1}"></action>
+		
+	</package>
+	
+	<package name="web" namespace="/web" extends="struts-default" >
+		
+	<!-- 	<interceptors>
+            <interceptor name="webInterceptor" class="com.nursery.interceptor.WebInterceptor"/>
+            <interceptor-stack name="adminStack">
+                <interceptor-ref name="defaultStack"/>
+                <interceptor-ref name="webInterceptor"/>
+            </interceptor-stack>
+        </interceptors>
+        <default-interceptor-ref name="adminStack"/>  -->
+        
+		<action name="*_*" class="{2}Action" method="{1}"></action>
+		
+	</package>
+
+	
+</struts>    

@@ -1,0 +1,10 @@
+要想正常的读写刷卡机首先要正确的安装驱动程序。
+解压“驱动程序.rar”文件执行里面的“CH341SER.EXE”文件安装驱动程序。
+
+安装好驱动程序以后按照下面的步骤配置刷卡机：
+1、解压JNative-1.3.2.zip 获得三个文件，分别是：JNativeCpp.dll，libJNativeCpp.so，JNative.jar 。
+2、JNativeCpp.dll Windows下用的，拷到windows / system32目录下
+3、HCE300_API.dll和Pcomm.dll是操作HCE-300系列磁卡读写机的函数的动态链接库，拷到windows / system32目录下。
+4、把JNativeCpp.dll，libJNativeCpp.so，JNative.jar，HCE300_API.dll，Pcomm.dll这五个文件拷贝到
+Tomcat的bin文件夹下（例如我本地的路径是D:\ProgramFiles\Apache Software Foundation\Tomcat 6.0\bin）
+经过上诉4步操作以后应该能正常的操作刷卡机了。

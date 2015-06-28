@@ -1,0 +1,35 @@
+body {
+/*   background-color: #eee; */
+  background-image: url(../../image/background/login.jpg) ;
+}
+
+.container{
+	width: 580px;
+ 	margin-top:350px;
+ 	margin-left: 600px;
+/*	margin-right: 700px; */
+}
+
+.uname{
+	margin-top: 35px; 
+	height: 45px; 
+	width:280px;
+}
+
+.pwd{
+	margin-top: 10px; 
+	height: 45px; 
+	width:280px;
+}
+
+.verify{
+	margin-top: 10px; 
+	height: 45px; 
+	width:207px;
+	display: inline;
+}
+
+
+/* input,img{
+	vertical-align:middle;
+} */
